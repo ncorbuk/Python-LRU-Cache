@@ -15,6 +15,7 @@ class Node:
 class LRUCache:
 
     cache_limit = 3
+    testing = 0
 
     def __init__(self, func):
         self.func = func
@@ -29,8 +30,9 @@ class LRUCache:
         #If in cache, pull results
         if args in self.cache:
             self.llist(args)
-
-            return f'Cached...{args}\n{self.cache[args]}\nCache: {self.cache}'
+            if self.testing == 1:
+                return f'Cached...{args}\n{self.cache[args]}\nCache: {self.cache}'
+            return self.cache[args]
 
         #If cache-limit reached - Remove LRU from node link list and dict - cache.
         if len(self.cache) > self.cache_limit:
@@ -45,7 +47,9 @@ class LRUCache:
         self.cache[args] = result
         node = Node(args, result)
         self._add(node)
-        return f'{result}\nCache: {self.cache}'
+        if self.testing == 1:
+            return f'{result}\nCache: {self.cache}'
+        return result
 
     #Remove from double linked-list - Node.
     def _remove(self, node):
@@ -69,37 +73,12 @@ class LRUCache:
                 node = current
                 self._remove(node)
                 self._add(node)
-                del self.cache[node.key]  #Debuging / See how cache order changes keeping most recent at top(tail) and least at bottom(head)
-                self.cache[node.key] = node.val #Debuging / See how cache order changes keeping most recent at top(tail) and least at bottom(head)
+                if self.testing == 1:
+                    del self.cache[node.key]  # Debugging/ to view cache list in order of linked-list...
+                    self.cache[node.key] = node.val # Debugging/ to view cache list in order of linked-list...
                 break
             else:
                 current = current.next
 
-
-
-@LRUCache
-def ex_func_01(n):
-    print(f'Computing...{n}x{n}')
-    time.sleep(1)
-    return n*n
-
-
-@LRUCache
-def ex_func_02(n):
-    print(f'Computing...{n}x{n}')
-    time.sleep(1)
-    return n*n
-
-print(f'\nFunction: ex_func_01')
-print(ex_func_01(4)) # Cache: {(4,): 16}
-print(ex_func_01(5)) # Cache: {(4,): 16, (5,): 25}
-print(ex_func_01(4)) # Cache: {(5,): 25, (4,): 16}
-print(ex_func_01(6)) # Cache: {(5,): 25, (4,): 16, (6,): 36}
-
-print(f'\nFunction: ex_func_02')
-print(ex_func_02(7)) # Cache: {(7,): 49}
-print(ex_func_02(8)) # Cache: {(7,): 49, (8,): 64}
-print(ex_func_02(4)) # Cache: {(7,): 49, (8,): 64, (4,): 16}
-print(ex_func_02(7)) # Cache: {(8,): 64, (4,): 16, (7,): 49}
 
 #Copyright (c) 2018 - Nathan Corbin - @ncorbuk(Twitter)
