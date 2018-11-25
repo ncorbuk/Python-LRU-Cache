@@ -35,6 +35,7 @@ print(ex_func_02(7)) # Cache: {(8,): 64, (4,): 16, (7,): 49} <-- 7 is moved from
 ```
 
 * This cache will remove the least used(at the bottom) when the cache limit is reached or in this case is one over the cache limit.
+* Each cache wrapper used is its own instance and has its own cache list and its own cache limit to fill.
 * Cached results move to the top, if are called again.
 * New results get added to the top
 * keeping most recently used at the top for further use.
