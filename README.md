@@ -47,4 +47,5 @@ To test it and see what i mean run the code, **python LRUCache.py** in terminal.
 
 * **Nathan Corbin** - *Github*: [ncorbuk](https://github.com/ncorbuk) - *Twitter*: [@ncorbuk](https://twitter.com/ncorbuk)
 
-*Simple,elegant,Lru Cache wrapper...*
+
+*Simple, Elegant, Lru Cache wrapper...*
