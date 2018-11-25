@@ -15,7 +15,8 @@ class Node:
 class LRUCache:
 
     cache_limit = 3
-    testing = 0
+    testing = 0 # If testing is set to 1, it will print the cache list of items etc so you can see the inner workings of program...
+                # defaults to 0,
 
     def __init__(self, func):
         self.func = func
