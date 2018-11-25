@@ -26,9 +26,14 @@ print(ex_func_01(4)) # Cache: {(4,): 16}
 print(ex_func_01(5)) # Cache: {(4,): 16, (5,): 25}
 print(ex_func_01(4)) # Cache: {(5,): 25, (4,): 16}
 print(ex_func_01(6)) # Cache: {(5,): 25, (4,): 16, (6,): 36}
+print(ex_func_01(7)) # Cache: {(5,): 25, (4,): 16, (6,): 36, (7,): 49}
+print(ex_func_01(8)) # Cache: {(4,): 16, (6,): 36, (7,): 49, (8,): 64}
 
 print(f'\nFunction: ex_func_02')
-print(ex_func_02(7)) # Cache: {(7,): 49}
-print(ex_func_02(8)) # Cache: {(7,): 49, (8,): 64}
-print(ex_func_02(4)) # Cache: {(7,): 49, (8,): 64, (4,): 16}
-print(ex_func_02(7)) # Cache: {(8,): 64, (4,): 16, (7,): 49}
+print(ex_func_02(8)) # Cache: {(7,): 49}
+print(ex_func_02(7)) # Cache: {(7,): 49, (8,): 64}
+print(ex_func_02(6)) # Cache: {(7,): 49, (8,): 64, (4,): 16}
+print(ex_func_02(4)) # Cache: {(8,): 64, (4,): 16, (7,): 49}
+print(ex_func_02(5)) # Cache: {(7,): 49, (6,): 36, (4,): 16, (5,): 25}
+print(ex_func_02(4)) # Cache: {(7,): 49, (6,): 36, (5,): 25, (4,): 16}
+
