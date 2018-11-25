@@ -6,6 +6,7 @@ LRUCache.testing = 1 # DEFAULTS to 0. Setting to 1 will be able to see cache lis
                      # and inner workings of program and for debugging...
 
 LRUCache.cache_limit = 3 # DEFAULTS to 3. But can change like so to any number that is needed.
+# Cache_limt > 3 ... then it will remove bottom cached result. It allows for 1 extra result over the set cache limit.
 
 @LRUCache
 def ex_func_01(n):
