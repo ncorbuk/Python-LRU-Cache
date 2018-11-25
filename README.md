@@ -38,8 +38,15 @@ This cache will remove the least used(at the bottom) when the cache limit is rea
 
 Simple system.
 
+## To use
+Put LRUCache.py file into the same directory as the python file your working on and do **from LRUCache import LRUCache**
+then use the wrapper **@LRUCache** above the functions you with to use LRU Cache(Least Recently Used Cache) with, its really 
+as simple as that.
+
 ## Testing
-To test it and see what i mean run the code, **python LRUCache.py** in terminal.
+* To test it and see what i mean run the code, **python LRUCache_test.py** in terminal.
+* The test file already has testing set to 1, so will output debugging mode and show how the cache works etc, 
+it defaults to 0 - wich is normal mode, wich just cache result and returns etc as expected.
 
 ## Built With
 
