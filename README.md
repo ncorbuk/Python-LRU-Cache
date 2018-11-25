@@ -49,7 +49,7 @@ as simple as that.
 ## Testing
 * To test it and see what i mean run the code, **python LRUCache_test.py** in terminal.
 * The test file already has testing set to 1, so will output debugging mode and show how the cache works etc, 
-it defaults to 0 - wich is normal mode, wich just cache result and returns etc as expected.
+it defaults to 0 - which is normal mode, wich just cache result and returns etc as expected.
 
 ## Built With
 
