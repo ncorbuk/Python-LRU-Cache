@@ -34,13 +34,16 @@ print(ex_func_02(4)) # Cache: {(7,): 49, (8,): 64, (4,): 16}
 print(ex_func_02(7)) # Cache: {(8,): 64, (4,): 16, (7,): 49} <-- 7 is moved from bottom the to top of cache
 ```
 
-This cache will remove the least used(at the bottom) when the cache limit is reached or in this case is one over the cache limit, and will move cached results to the top if are called again and already in cache, or add new results to the top if not... keeping most recently used at the top for further use.
+* This cache will remove the least used(at the bottom) when the cache limit is reached or in this case is one over the cache limit.
+* Cached results move to the top, if are called again.
+* New results get added to the top
+**keeping most recently used at the top for further use.**
 
-Simple system.
+*Simple system.*
 
 ## To use
-Put LRUCache.py file into the same directory as the python file your working on and do **from LRUCache import LRUCache**
-then use the wrapper **@LRUCache** above the functions you with to use LRU Cache(Least Recently Used Cache) with, its really 
+Put **LRUCache.py** file into the same directory as the python file your working on and do **from LRUCache import LRUCache**
+then use the wrapper **@LRUCache** above the functions you wish to use LRU Cache(Least Recently Used Cache) with, its really 
 as simple as that.
 
 ## Testing
