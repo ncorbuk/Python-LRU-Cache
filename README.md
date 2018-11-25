@@ -22,16 +22,21 @@ def ex_func_02(n):
     return n*n
 
 print(f'\nFunction: ex_func_01')
-print(ex_func_01(4)) # Cache: {(4,): 16}
-print(ex_func_01(5)) # Cache: {(4,): 16, (5,): 25}
-print(ex_func_01(4)) # Cache: {(5,): 25, (4,): 16} <-- 4 is moved from the bottom to the top of cache
+print(ex_func_01(4)) # Cache: {(4,): 16} <-- 4 is at top / only on here.
+print(ex_func_01(5)) # Cache: {(4,): 16, (5,): 25} <-- 4 is at bottom with 5 at top
+print(ex_func_01(4)) # Cache: {(5,): 25, (4,): 16} <-- 4 gets called from cache and gets moved to top again.
 print(ex_func_01(6)) # Cache: {(5,): 25, (4,): 16, (6,): 36}
+print(ex_func_01(7)) # Cache: {(5,): 25, (4,): 16, (6,): 36, (7,): 49} <-- cache limit reached.
+print(ex_func_01(8)) # Cache: {(4,): 16, (6,): 36, (7,): 49, (8,): 64} <-- 5 is removed and 8 joins top
 
 print(f'\nFunction: ex_func_02')
-print(ex_func_02(7)) # Cache: {(7,): 49}
-print(ex_func_02(8)) # Cache: {(7,): 49, (8,): 64}
-print(ex_func_02(4)) # Cache: {(7,): 49, (8,): 64, (4,): 16}
-print(ex_func_02(7)) # Cache: {(8,): 64, (4,): 16, (7,): 49} <-- 7 is moved from bottom the to top of cache
+print(ex_func_02(8)) # Cache: {(8,): 64}
+print(ex_func_02(7)) # Cache: {(8,): 64, (7,): 49}
+print(ex_func_02(6)) # Cache: {(8,): 64, (7,): 49, (6,): 36}
+print(ex_func_02(4)) # Cache: {(8,): 64, (7,): 49, (6,): 36, (4,): 16} <-- 4 on end + at cache limit. 1 over cache limit 3 = 4
+print(ex_func_02(5)) # Cache: {(7,): 49, (6,): 36, (4,): 16, (5,): 25} <-- 8 gets removed and 5 joins the top
+print(ex_func_02(4)) # Cache: {(7,): 49, (6,): 36, (5,): 25, (4,): 16} <-- 4 get called from cache and gets moved to top
+
 ```
 
 * This cache will remove the least used(at the bottom) when the cache limit is reached or in this case is one over the cache limit.
