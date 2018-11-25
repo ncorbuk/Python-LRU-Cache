@@ -1,5 +1,6 @@
 # Python-LRU-Cache
 Python implementation of Least Recently Used Cache (LRU Cache) using dict and linked list.
+*Simple, Elegant, Lru Cache wrapper...*
 
 ## Description
 This LRUCache code, will create a cache(dict) and a linked list per each *instance* eg. per each function the wrapper class is used on
@@ -46,8 +47,3 @@ To test it and see what i mean run the code, **python LRUCache.py** in terminal.
 ## Authors
 
 * **Nathan Corbin** - *Github*: [ncorbuk](https://github.com/ncorbuk) - *Twitter*: [@ncorbuk](https://twitter.com/ncorbuk)
-
-
-
-
-*Simple, Elegant, Lru Cache wrapper...*
