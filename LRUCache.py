@@ -41,8 +41,6 @@ class LRUCache:
             self._remove(n)
             del self.cache[n.key]
 
-
-
         #Compute and cache and node - if not in cache
         result = self.func(*args, **kwargs)
         self.cache[args] = result
@@ -66,7 +64,8 @@ class LRUCache:
         self.tail.prev = node
         node.prev = p
         node.next = self.tail
-
+    
+    #If in result in cache, move to top of Cache/linked-list - Node.
     def llist(self, args):
         current = self.head
         while current != (0,0):
