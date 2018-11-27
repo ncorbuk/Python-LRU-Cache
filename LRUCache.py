@@ -68,7 +68,7 @@ class LRUCache:
     #If in result in cache, move to top of Cache/linked-list - Node.
     def llist(self, args):
         current = self.head
-        while current != (0,0):
+        while True:
             if current.key == args :
                 node = current
                 self._remove(node)
