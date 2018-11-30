@@ -14,9 +14,9 @@ class Node:
 
 class LRUCache:
 
-    cache_limit = 3
-    testing = 0 # If testing is set to 1, it will print the cache list of items etc so you can see the inner workings of program...
-                # defaults to 0,
+    cache_limit = None
+    DEBUG = False # If DEBUG is equal to TRUE, you will get cache list printed on each and be able to
+                  # see cached results printed etc
 
     def __init__(self, func):
         self.func = func
@@ -31,22 +31,23 @@ class LRUCache:
         #If in cache, pull results
         if args in self.cache:
             self.llist(args)
-            if self.testing == 1:
+            if self.DEBUG == True:
                 return f'Cached...{args}\n{self.cache[args]}\nCache: {self.cache}'
             return self.cache[args]
 
         #If cache-limit reached - Remove LRU from node link list and dict - cache.
-        if len(self.cache) > self.cache_limit:
-            n = self.head.next
-            self._remove(n)
-            del self.cache[n.key]
+        if self.cache_limit is not None:
+            if len(self.cache) > self.cache_limit:
+                n = self.head.next
+                self._remove(n)
+                del self.cache[n.key]
 
         #Compute and cache and node - if not in cache
         result = self.func(*args, **kwargs)
         self.cache[args] = result
         node = Node(args, result)
         self._add(node)
-        if self.testing == 1:
+        if self.DEBUG == True:
             return f'{result}\nCache: {self.cache}'
         return result
 
@@ -73,7 +74,7 @@ class LRUCache:
                 node = current
                 self._remove(node)
                 self._add(node)
-                if self.testing == 1:
+                if self.DEBUG == True:
                     del self.cache[node.key]  # Debugging/ to view cache list in order of linked-list...
                     self.cache[node.key] = node.val # Debugging/ to view cache list in order of linked-list...
                 break
