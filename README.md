@@ -53,9 +53,9 @@ then use the wrapper **@LRUCache** above the functions you wish to use LRU Cache
 as simple as that.
 
 ## Testing
-* To test it and see what i mean run the code, **python LRUCache_test.py** in terminal.
-* The test file already has testing set to 1, so will output debugging mode and show how the cache works etc, 
-it defaults to 0 - which is normal mode, which just cache result and returns etc as expected, does not print cache/extra output etc.
+* To test it and see what i mean *Fork* the repository and run the code, **python LRUCache_test.py** in terminal.
+* The test file already has DEBUG set to True, so will output debugging mode and show how the cache works etc, 
+it defaults to False - which is normal mode, which will just cache result and returns etc as expected, does not print cache/extra debuging output etc.
 
 ## Built With
 
