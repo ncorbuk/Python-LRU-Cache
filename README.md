@@ -8,7 +8,8 @@ This LRUCache code, will create a cache(dict) and a linked list per each *instan
 like so..
 
 ```
-LRUCache.cache_limit = 3 # Once cache > cache_limit, it then removes cached result from bottom, appends new result to top.
+LRUCache.cache_limit = 3 # Defaults to None.
+ #Once cache > cache_limit, it then removes cached result from bottom, appends new result to top.
 
 @LRUCache
 def ex_func_01(n):
