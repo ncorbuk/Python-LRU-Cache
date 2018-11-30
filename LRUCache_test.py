@@ -2,12 +2,13 @@
 import time
 from LRUCache import LRUCache
 
-LRUCache.testing = 1 # DEFAULTS to 0. Setting to 1 will be able to see cache list and how it changes and moves items up and off list
-                     # and inner workings of program and for debugging...
+# Only setting this for testing purpose/testing file.
+LRUCache.DEBUG = True # DEFAULTS to False. When True, will print Cached list per each result, and show in test file
+                      # when result is cached etc... used for debugging/testing purposes only.
 
-LRUCache.cache_limit = 3 # DEFAULTS to 3. But can change like so to any number that is needed.
-# Cache_limt > 3 ... then it will remove bottom cached result. It allows for 1 extra result over the set cache limit.
-
+LRUCache.cache_limit = 3 # DEFAULTS to None. If None...There is no limit to the cach list. Setting to 3 in test file..
+                          # for testing purposes.
+  
 @LRUCache
 def ex_func_01(n):
     print(f'Computing...{n}x{n}')
