@@ -52,13 +52,11 @@ print(ex_func_02(4)) # Cache: {(7,): 49, (6,): 36, (5,): 25, (4,): 16} <-- 4 get
 
 ## To use
 Put **LRUCache.py** file into the same directory as the python file your working on and do **from LRUCache import LRUCache**
-then use the wrapper **@LRUCache** above the functions you wish to use LRU Cache(Least Recently Used Cache) with, its really 
-as simple as that.
+then set **LRUCache.cache_limit** and use the wrapper **@LRUCache** above the functions you wish to use LRU Cache(Least Recently Used Cache) with, its really as simple as that.
 
 ## Testing
 * To test it and see what i mean *Fork* the repository and run the code, **python LRUCache_test.py** in terminal.
-* The test file already has DEBUG set to True, so will output debugging mode and show how the cache works etc, 
-it defaults to False - which is normal mode, which will just cache result and returns etc as expected, does not print cache/extra debuging output etc.
+* The test file has DEBUG set to True, it will output debugging mode and show how the cache works etc. It defaults to False - which is normal mode.
 
 ## Built With
 
