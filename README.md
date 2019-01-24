@@ -3,10 +3,12 @@ Python implementation of Least Recently Used Cache (LRU Cache) using dict and li
 
 *Simple, Elegant, Lru Cache wrapper...*
 
-## Code Walk-through
+## Code Walk-through / Python / Hacking - links
 **LRU Cache tutorial: https://bit.ly/2U58Lt9**
 
 **For python tutorials: https://bit.ly/2U58Lt9**
+
+**Python_AND_Hacking subreddit: https://bit.ly/2Uf3gbw**
 
 ## Description
 This LRUCache code, will create a cache(dict) and a linked list per each *instance* eg. per each function the wrapper class is used on
