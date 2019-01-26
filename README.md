@@ -3,7 +3,7 @@ Python implementation of Least Recently Used Cache (LRU Cache) using dict and li
 
 *Simple, Elegant, Lru Cache wrapper...*
 
-## Code Walk-through / Python / Hacking - links
+## Code Walk-through & Learning resources links
 **LRU Cache tutorial: https://bit.ly/2U58Lt9**
 
 **For python tutorials: https://bit.ly/2U58Lt9**
