@@ -1,4 +1,7 @@
 # Python-LRU-Cache
+*#python* *#python3* *#3* *#cache* *#caching* *#lru* *#lrucache* *#memoization* *#create* *#function* #*array* #*lists* #*linked*
+*#doubly* *#chaining* *#lru* *#LRU* *#cached* *#cachette* *#cache* *#memoisaation* *#dict* *#wrapper* *#class* *#cache_limit*
+
 Python implementation of Least Recently Used Cache (LRU Cache) using dict and linked list.
 
 *Simple, Elegant, Lru Cache wrapper...*
