@@ -13,8 +13,9 @@ Python implementation of Least Recently Used Cache (LRU Cache) using dict and li
 
 **Python_AND_Hacking subreddit: https://bit.ly/2Uf3gbw**
 
-## Become a Patreon - support the channel
-*Become a Patreon and support this channel, so that it can keep creating great content in the future* **LINK: https://www.patreon.com/w3w3w3**
+## If you would like to leave a tip you can do so below, thanks 
+* PayPal: https://paypal.me/w3w3w3
+* Bitcoin: 1EHmioBmujNAyVs5A6Uo1nfto9JZhGBDLd
 
 ## Description
 This LRUCache code, will create a cache(dict) and a linked list per each *instance* eg. per each function the wrapper class is used on
