@@ -78,4 +78,4 @@ then set **LRUCache.cache_limit** and use the wrapper **@LRUCache** above the fu
 
 ## Authors
 
-* **Nathan Corbin** - *Github*: [ncorbuk](https://github.com/ncorbuk) - *Twitter*: [@ncorbuk](https://twitter.com/ncorbuk)
+* **Anon** - *Github*: [ncorbuk](https://github.com/ncorbuk) - *Twitter*: [@ncorbuk](https://twitter.com/ncorbuk)
